@@ -47,7 +47,7 @@ int main(void) {
     if (mq_timedsend(mqd, (void *)&a_msg, sizeof(struct msgs), priority, &to) ==
         -1) {
       perror("mq_timedsend failed ");
-      // exit(EXIT_FAILURE);
+      //exit(EXIT_FAILURE);
     }
     if (strncmp(buffer, "end", 3) == 0)
       running = 0;

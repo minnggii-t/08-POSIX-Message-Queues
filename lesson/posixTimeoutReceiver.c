@@ -47,7 +47,7 @@ int main(void) {
     to.tv_sec += 15;  // set timeout to be 15 second from the current time
     if (mq_timedreceive(mqd, (void *)&a_msg, MAX_MSG_SIZE, &priority, &to) == -1) { // receive 
       perror("mq_timedreceive failed ");
-      exit(EXIT_FAILURE);
+      //exit(EXIT_FAILURE);
     }
     printf("Received Message: %s", a_msg.data);
     if (strncmp(a_msg.data, "end", 3) == 0)
